@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/form/form.css">
+    <title>Form thông tin cá nhân</title>
+</head>
+<body>
+    <fieldset>
+        <legend>form thông tin cá nhân</legend>
+    <!-- ho ten -->
+    <form action="/submit" method="post" enctype="multipart/form-data">
+        <label for="ho">Họ</label>
+        <input type="text" name="ho" id="ho" placeholder="Nhập họ" required>
+        <label for="ten">Tên</label>
+        <input type="text" name="ten" id="ten" placeholder="Nhập Tên" required>
+        <!-- gioi tinh -->
+        <label for="gioitinh">Giới tính</label>
+        <select name="gioitinh" id="gioitinh">
+        <option value="">Nam</option>
+        <option value="">Nữ</option>
+        </select>
+        <!-- truong, msv -->
+        <label for="truonghoc">Trường đang học</label>
+        <input type="text" name="truonghoc" id="truonghoc" placeholder="Nhập trường đang học" required>
+        <label for="msv">Mã sinh viên</label>
+        <input type="text" name="msv" id="msv" placeholder="Nhập MSV" required>
+        <!-- email, sdt -->
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="Nhập email" required>
+        <label for="sdt">Số điện thoại</label>
+        <input type="number" name="sdt" id="sdt" placeholder="Nhập SDT" required>
+        <!-- Sở thích, màu yêu thích -->
+        <p>Sở thích</p>
+        <div class="containercb">
+            <label class="checkbox checkbox1">
+                <input type="checkbox" name="   sothich" value="nghenhac"> Nghe nhạc
+            </label>
+            <label class="checkbox checkbox2">
+                <input type="checkbox" name="sothich" value="xemphim"> Xem phim
+            </label>
+            <label class="checkbox checkbox3">
+                <input type="checkbox" name="sothich" value="choigame"> Chơi game
+            </label>
+            <label class="checkbox checkbox4">
+                <input type="checkbox" name="sothich" value="docsach"> Đọc sách
+            </label>
+            <label class="checkbox checkbox5">
+                <input type="checkbox" name="sothich" value="dulich"> Du lịch
+            </label>
+            <label class="checkbox checkbox6">
+                <input type="checkbox" name="sothich" value="thethao"> Thể thao
+            </label>
+            <label class="checkbox checkbox7">
+                <input type="checkbox" name="sothich" value="chupanh"> Chụp ảnh
+            </label>
+        </div>
+        
+        <label for="mausac">Màu sắc yêu thích</label>
+        <input type="color" id="mausac" name="mausac">
+        <!-- ảnh đại diện, quê quán, chuyên ngành -->
+        <label for="avatar">ảnh đại diện</label>
+        <input type="file" name="avatar" id="avatar">
+
+        <label for="quequan">Quê quán</label>
+        <input list="quequan-ds" type="text" name="quequan" id="quequan" placeholder="Chọn hoặc nhập quê quán" required>
+        <datalist id="quequan-ds">
+            <option value="Hà Nội">
+                <option value="TP. Hồ Chí Minh">
+                <option value="Hà Tĩnh">
+                <option value="Đà Nẵng">
+                <option value="Cần Thơ">
+                <option value="Hải Phòng">
+                <option value="Quảng Ninh">
+                <option value="Nghệ An">
+        </datalist>
+
+        <label for="chuyennganh">Chuyên Ngành</label>
+        <select name="chuyennganh" id="chuyennganh">
+            <option value="1" selected>Lập Trình web</option>
+            <option value="2">Lập Trình game</option>
+            <option value="3">Lập Trình Phần mềm</option>
+        </select>
+        <!-- ngôn ngữ lập trình, kinh nghiệm chuyên ngành -->
+        <label for="ngonngu">Ngôn ngữ lập trình:</label>
+        <input list="ngonngu-ds" type="text" id="ngonngu" name="ngonngu" placeholder="Chọn hoặc nhập ngôn ngữ">
+        <datalist id="ngonngu-ds">
+            <option value="python">Python</option>
+            <option value="javascript">JavaScript</option>
+            <option value="java">Java</option>
+            <option value="csharp">C#</option>
+            <option value="cpp">C++</option>
+            <option value="php">PHP</option>
+        </datalist>
+
+
+        <label for="kinhnghiem">Kinh nghiệm chuyên ngành</label>
+        <textarea name="kinhnghiem" id="kinhnghiem" rows="4" cols="50" placeholder="Nhập kinh nghiệm của bạn..."></textarea>
+        <button>submit</button>
+    </form>
+    </fieldset>
+</body>
+</html>

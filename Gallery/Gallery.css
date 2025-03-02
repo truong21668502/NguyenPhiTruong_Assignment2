@@ -1,0 +1,32 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+}
+img{
+    width: 200px;
+    height: 200px;
+    border-radius: 6px;
+}
+iframe{
+    width: 400px;
+    height: 200px;
+}
+.video{
+    grid-column: span 2;
+}
